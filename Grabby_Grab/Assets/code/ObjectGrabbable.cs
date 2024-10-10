@@ -18,6 +18,13 @@ public class ObjectGrabbable : MonoBehaviour
          this.objectGrabPointTransform = objectGrabPointTransform;
         objectRigidbody.useGravity = false;
     }
+
+    public void Drop()
+    {
+        print("drop");
+        this.objectGrabPointTransform = null;
+        objectRigidbody.useGravity = true;
+    }
    
     private void FixedUpdate() 
     {
